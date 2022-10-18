@@ -3,21 +3,22 @@ kind: Config
 directories:
 - path: eink-radiator
   contents:
+  - path: main
     githubRelease:
       slug: petewall/eink-radiator
       latest: true
-- path: display
-  contents:
-    githubRelease:
-      slug: petewall/eink-radiator-display
-      latest: true
-- path: image-source-blank
-  contents:
+      disableAutoChecksumValidation: true
+  - path: display
+    git:
+      url: https://github.com/petewall/eink-radiator-display
+      ref: origin/main
+  - path: image-source-blank
     githubRelease:
       slug: petewall/eink-radiator-image-source-blank
       latest: true
-- path: image-source-image
-  contents:
+      disableAutoChecksumValidation: true
+  - path: image-source-image
     githubRelease:
       slug: petewall/eink-radiator-image-source-image
       latest: true
+      disableAutoChecksumValidation: true
