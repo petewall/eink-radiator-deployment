@@ -1,0 +1,23 @@
+apiVersion: vendir.k14s.io/v1alpha1
+kind: Config
+directories:
+- path: eink-radiator
+  contents:
+    githubRelease:
+      slug: petewall/eink-radiator
+      latest: true
+- path: display
+  contents:
+    githubRelease:
+      slug: petewall/eink-radiator-display
+      latest: true
+- path: image-source-blank
+  contents:
+    githubRelease:
+      slug: petewall/eink-radiator-image-source-blank
+      latest: true
+- path: image-source-image
+  contents:
+    githubRelease:
+      slug: petewall/eink-radiator-image-source-image
+      latest: true
