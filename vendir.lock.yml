@@ -1,0 +1,23 @@
+apiVersion: vendir.k14s.io/v1alpha1
+directories:
+- contents:
+  - githubRelease:
+      tag: v0.1.1
+      url: https://api.github.com/repos/petewall/eink-radiator/releases/80035701
+    path: main
+  - git:
+      commitTitle: '[ci skip] bump version to 0.0.4'
+      sha: 9ea026ac824690b521c710be16cf5d8f66f96eda
+      tags:
+      - v0.0.4-1-g9ea026a
+    path: display
+  - githubRelease:
+      tag: v0.1.10
+      url: https://api.github.com/repos/petewall/eink-radiator-image-source-blank/releases/80021591
+    path: image-source-blank
+  - githubRelease:
+      tag: v0.1.9
+      url: https://api.github.com/repos/petewall/eink-radiator-image-source-image/releases/80021630
+    path: image-source-image
+  path: components
+kind: LockConfig

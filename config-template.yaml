@@ -1,0 +1,13 @@
+#@ load("@ytt:data", "data")
+---
+apiVersion: v1.eink-radiator.petewall.net
+kind: Config
+tools:
+- name: blank
+  path: #@ data.values.cwd + "/tools/blank"
+- name: image
+  path: #@ data.values.cwd + "/tools/image"
+- name: screen
+  path: #@ data.values.cwd + "/tools/display"
+imagesPath: #@ data.values.imagesPath
+slidesPath: #@ data.values.slidesPath

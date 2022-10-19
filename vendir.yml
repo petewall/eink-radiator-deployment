@@ -1,13 +1,14 @@
 apiVersion: vendir.k14s.io/v1alpha1
 kind: Config
 directories:
-- path: eink-radiator
+- path: components
   contents:
   - path: main
     githubRelease:
       slug: petewall/eink-radiator
       latest: true
       disableAutoChecksumValidation: true
+      assetNames: ["eink-radiator-arm6"]
   - path: display
     git:
       url: https://github.com/petewall/eink-radiator-display
@@ -17,8 +18,10 @@ directories:
       slug: petewall/eink-radiator-image-source-blank
       latest: true
       disableAutoChecksumValidation: true
+      assetNames: ["blank-arm6"]
   - path: image-source-image
     githubRelease:
       slug: petewall/eink-radiator-image-source-image
       latest: true
       disableAutoChecksumValidation: true
+      assetNames: ["image-arm6"]
