@@ -14,15 +14,18 @@ This repository contains the deployment instructions for Raspberry Pi Zero W, wh
   * Update packages:
 
 ```bash
+# raspi-config and enable SPI
+
 sudo apt update
 sudo apt upgrade --yes --fix-missing
 sudo apt autoremove
+sudo apt install --yes libjpeg-dev python3-pip 
 ```
 
   * TBD: Install [vendir](https://carvel.dev/vendir/):
 
 ```bash
-# Need to build arm 32-bit binary and scp it
+# Need to build arm 32-bit binaries for ytt and vendir and scp them over
 ```
 
 ## Deploy the software
