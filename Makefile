@@ -7,26 +7,34 @@ config.yaml: config-template.yaml
 		--data-value imagesPath="$${IMAGES_PATH}" \
 		--data-value slidesPath="$${SLIDES_PATH}" > config.yaml
 
-tools/blank: vendir.yml
+components/image-source-blank/blank-arm6: vendir.yml
 	vendir sync
+
+tools/blank: components/image-source-blank/blank-arm6
 	mkdir -p tools
 	cp components/image-source-blank/blank-arm6 tools/blank
 	chmod a+x tools/blank
 
-tools/image: vendir.yml
+components/image-source-image/image-arm6: vendir.yml
 	vendir sync
+
+tools/image: components/image-source-image/image-arm6
 	mkdir -p tools
 	cp components/image-source-image/image-arm6 tools/image
 	chmod a+x tools/image
 
-tools/display: vendir.yml
+components/display/main.py: vendir.yml
 	vendir sync
+
+tools/display: components/display/main.py
 	mkdir -p tools
 	ln -s components/display/main.py tools/display
 	chmod a+x tools/display
-
-tools/main: vendir.yml
+	
+components/main/eink-radiator-arm6: vendir.yml
 	vendir sync
+
+tools/main: components/main/eink-radiator-arm6
 	mkdir -p tools
 	cp components/main/eink-radiator-arm6 tools/main
 	chmod a+x tools/main
