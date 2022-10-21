@@ -11,10 +11,10 @@ This repository contains the deployment instructions for Raspberry Pi Zero W, wh
   * Enable SSH
   * Set the username and password
 * On first boot:
-  * Update packages:
+  * Enable SPI, update and install required software:
 
 ```bash
-# raspi-config and enable SPI
+sudo raspi-config  # enable SPI
 
 sudo apt update
 sudo apt upgrade --yes --fix-missing
@@ -22,7 +22,7 @@ sudo apt autoremove
 sudo apt install --yes libjpeg-dev python3-pip 
 ```
 
-  * TBD: Install [vendir](https://carvel.dev/vendir/):
+  * TBD: Install [vendir](https://carvel.dev/vendir/) and [ytt](https://carvel.dev/ytt/):
 
 ```bash
 # Need to build arm 32-bit binaries for ytt and vendir and scp them over
@@ -33,4 +33,5 @@ sudo apt install --yes libjpeg-dev python3-pip
 ```bash
 git clone https://github.com/petewall/eink-radiator-deployment.git
 make start
+# Need to install python packages at some point...
 ```
