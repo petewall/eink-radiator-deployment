@@ -9,6 +9,13 @@ directories:
       latest: true
       disableAutoChecksumValidation: true
       assetNames: ["eink-radiator-arm6"]
+  - path: ui
+    git:
+      url: https://github.com/petewall/eink-radiator
+      ref: origin/main
+      latest: true
+      includePaths:
+      - web/**/*
   - path: display
     git:
       url: https://github.com/petewall/eink-radiator-display

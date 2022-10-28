@@ -1,11 +1,11 @@
-IMAGES_PATH=/opt/eink-radiator/images
-SLIDES_PATH=/opt/eink-radiator/slides.yaml
+IMAGES_PATH = /opt/eink-radiator/images
+SLIDES_PATH = /opt/eink-radiator/slides.yaml
 
 config.yaml: config-template.yaml
 	ytt --file config-template.yaml \
 		--data-value cwd=$$(pwd) \
-		--data-value imagesPath="$${IMAGES_PATH}" \
-		--data-value slidesPath="$${SLIDES_PATH}" > config.yaml
+		--data-value imagesPath="$(IMAGES_PATH)" \
+		--data-value slidesPath="$(SLIDES_PATH)" > config.yaml
 
 components/image-source-blank/blank-arm6: vendir.yml
 	vendir sync
