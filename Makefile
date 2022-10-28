@@ -28,8 +28,7 @@ components/display/main.py: vendir.yml
 
 tools/display: components/display/main.py
 	mkdir -p tools
-	ln -s components/display/main.py tools/display
-	chmod a+x tools/display
+	ln -s $$(pwd)/components/display/main.py tools/display
 	
 components/main/eink-radiator-arm6: vendir.yml
 	vendir sync
